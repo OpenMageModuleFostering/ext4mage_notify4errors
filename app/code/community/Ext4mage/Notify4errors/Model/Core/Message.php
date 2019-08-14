@@ -29,7 +29,8 @@ class Ext4mage_Notify4errors_Model_Core_Message extends Mage_Core_Model_Message{
         	$errorLog = new Ext4mage_Notify4errors_Model_Errorlog();
         	$errorLog->logMessage($code, self::ERROR, $class, $method);	
         }
-    	return parent::error($code, $class, $method);
+//     	return parent::error($code, $class, $method);
+        return $this->_factory($code, self::ERROR, $class, $method);
     }
 
     public function warning($code, $class='', $method='')
@@ -48,6 +49,7 @@ class Ext4mage_Notify4errors_Model_Core_Message extends Mage_Core_Model_Message{
         	$errorLog = new Ext4mage_Notify4errors_Model_Errorlog();
         	$errorLog->logMessage($code, self::NOTICE, $class, $method);	
         }
-    	return parent::notice($code, $class, $method);
+//     	return parent::notice($code, $class, $method);
+    	return $this->_factory($code, self::NOTICE, $class, $method);
     }
 }

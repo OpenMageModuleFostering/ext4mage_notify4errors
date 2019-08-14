@@ -34,13 +34,6 @@
 					<frontName>notify4errors</frontName>
 				</args>
 			</notify4errors>
-			<adminhtml>
-                <args>
-                    <modules>
-                        <Ext4mage_Notify4errors before="Mage_Adminhtml">Ext4mage_Notify4errors</Ext4mage_Notify4errors>
-                    </modules>
-                </args>
-            </adminhtml>
         </routers>
     </admin>
     <adminhtml>
@@ -62,7 +55,7 @@
         </translate>
     </adminhtml>
     <frontend>
-        <routers>
+         <routers>
             <cms>
                 <args>
                     <modules>

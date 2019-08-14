@@ -72,7 +72,7 @@ class Ext4mage_Notify4errors_Model_Errorlog extends Mage_Core_Model_Abstract
 
 	public function cms404($type){
 		//add included info
-		$this->setCmsType($type);
+		$this->setMessText($type);
 	
 		$this->_logUserInfo();
 	}
