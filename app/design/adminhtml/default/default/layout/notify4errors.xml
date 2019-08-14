@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<notify4errors_adminhtml_errorlog_index>
+        <reference name="content">
+            <block type="notify4errors/adminhtml_errorlog" name="errorlog" />
+        </reference>
+    </notify4errors_adminhtml_errorlog_index>
+</layout>

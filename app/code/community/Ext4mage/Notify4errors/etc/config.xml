@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<!-- 
+ * Ext4mage Notify4errors Module
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to Henrik Kier <info@ext4mage.com> so we can send you a copy immediately.
+ *
+ * @category   Ext4mage
+ * @package    Ext4mage_Notify4errors
+ * @copyright  Copyright (c) 2012 Ext4mage (http://ext4mage.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Henrik Kier <info@ext4mage.com>
+ * 
+--> 
+<config>
+	<modules>
+		<Ext4mage_Notify4errors>
+			<version>1.0.0.0</version>
+		</Ext4mage_Notify4errors>
+	</modules>
+    <admin>
+         <routers>
+            <notify4errors>
+				<use>admin</use>
+				<args>
+					<module>Ext4mage_Notify4errors</module>
+					<frontName>notify4errors</frontName>
+				</args>
+			</notify4errors>
+			<adminhtml>
+                <args>
+                    <modules>
+                        <Ext4mage_Notify4errors before="Mage_Adminhtml">Ext4mage_Notify4errors</Ext4mage_Notify4errors>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+    	<layout>
+			<updates>
+				<notify4errors>
+					<file>notify4errors.xml</file>
+				</notify4errors>
+			</updates>
+		</layout>
+    	<translate>
+            <modules>
+                <Ext4mage_Notify4errors>
+                    <files>
+                        <default>Ext4mage_Notify4errors.csv</default>
+                    </files>
+                </Ext4mage_Notify4errors>
+            </modules>
+        </translate>
+    </adminhtml>
+    <frontend>
+        <routers>
+            <cms>
+                <args>
+                    <modules>
+                         <Ext4mage_Notify4errors before="Mage_Cms">Ext4mage_Notify4errors</Ext4mage_Notify4errors>
+                    </modules>
+                </args>
+            </cms>
+        </routers>
+    </frontend>
+    <global>
+        <models>
+            <notify4errors>
+                <class>Ext4mage_Notify4errors_Model</class>
+				<resourceModel>notify4errors_mysql4</resourceModel>
+            </notify4errors>
+	        <notify4errors_mysql4>
+				<class>Ext4mage_Notify4errors_Model_Mysql4</class>
+				<entities>
+					<errorlog>
+						<table>notify4errors_errorlog</table>
+					</errorlog>
+				</entities>
+			</notify4errors_mysql4>
+			<core>
+                <rewrite>
+                    <message>Ext4mage_Notify4errors_Model_Core_Message</message>
+                </rewrite>
+            </core>
+	    </models>
+	    <helpers>
+        	<notify4errors>
+            	<class>Ext4mage_Notify4errors_Helper</class>
+        	</notify4errors>
+    	</helpers>
+    	<resources>
+			<notify4errors_setup>
+				<setup>
+					<module>Ext4mage_Notify4errors</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</notify4errors_setup>
+			<notify4errors_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</notify4errors_write>
+			<notify4errors_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</notify4errors_read>
+		</resources>
+         <blocks>
+            <notify4errors>
+				<class>Ext4mage_Notify4errors_Block</class>
+			</notify4errors>
+        </blocks>
+    </global>
+    <default>
+       	<notify4errors>
+       		<settings>
+				<!-- <email_freq>0</email_freq> -->
+				<messages>0</messages>
+				<!-- <capture_js>0</capture_js> -->
+				<capture_route>0</capture_route>
+				<capture_cookie>0</capture_cookie>
+			</settings>
+       	</notify4errors>
+    </default>
+</config>

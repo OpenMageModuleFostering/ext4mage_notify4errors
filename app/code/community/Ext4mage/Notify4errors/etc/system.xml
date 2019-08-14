@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+ * Ext4mage Notify4errors Module
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to Henrik Kier <info@ext4mage.com> so we can send you a copy immediately.
+ *
+ * @category   Ext4mage
+ * @package    Ext4mage_Notify4errors
+ * @copyright  Copyright (c) 2012 Ext4mage (http://ext4mage.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Genevieve Eddison, Jonathan Feist <sales@ext4mage.com>
+ * */ -->
+<config>
+	<sections>
+		<notify4errors translate="label" module="notify4errors">
+        	<label>Notify4errors</label>
+	        <tab>ext4mage</tab>
+	        <frontend_type>text</frontend_type>
+	        <sort_order>30</sort_order>
+	        <show_in_default>1</show_in_default>
+	        <show_in_website>1</show_in_website>
+	        <show_in_store>1</show_in_store>
+            <groups>
+	        	<settings translate="label">
+	        		<label>General Settings</label>
+			        <frontend_type>text</frontend_type>
+			        <sort_order>10</sort_order>
+			        <show_in_default>1</show_in_default>
+			        <show_in_website>1</show_in_website>
+			        <show_in_store>1</show_in_store>
+			        <comment>
+				      <![CDATA[
+						<div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin-bottom:7px;">
+						Developed by <a href="http://ext4mage.com" target="_blank">ext4mage.com</a> - Get manual and advise on <a href="http://ext4mage.com" target="_blank">ext4mage.com</a>.<br /><br />
+						We have the best PDF customizer  for Magento on the market.  
+						More than 800 variables available - <a href="http://ext4mage.com/html2pdf-magento-extension-html.html" target="_blank">ext4mage HTML2PDF</a><br />
+						Change and design everything in your Order, Invoice, Shipping and Credit PDF directly from WYSIWYG editor.
+						</div>
+					  ]]>
+					</comment>
+                	<fields>
+                    	<!-- <license_code translate="label">
+							<label>License code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</license_code>
+						<email_adr translate="label">
+							<label>Email adress</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[The email adress that shall recieve the notification (use multi by deviding with comma)]]></comment>
+						</email_adr>
+						<email_freq translate="label">
+							<label>Email frequency</label>
+							<frontend_type>select</frontend_type>
+							<source_model>ext4mage_notify4errors_model_source_frequencyemail</source_model>
+                            <sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[How often shall the email be sent.]]></comment>
+						</email_freq> -->
+						<messages translate="label">
+							<label>Messages levels</label>
+							<frontend_type>select</frontend_type>
+							<source_model>ext4mage_notify4errors_model_source_messagelevel</source_model>
+                            <sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[Which message levels shall be captured]]></comment>
+						</messages>
+						<!--  <capture_js translate="label">
+							<label>Capture JavaScript validation</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[Shall error in the front-end javascript validation be captured]]></comment>
+						</capture_js> -->
+						<capture_route translate="label">
+							<label>Capture CMS no-route (404)</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[Capture request to pages that do not exist - all soft 404 showings]]></comment>
+						</capture_route>
+						<capture_cookie translate="label">
+							<label>Capture CMS no-cookie</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[Capture request where user do not have cookie enabled]]></comment>
+						</capture_cookie>
+					</fields>
+				</settings>
+        	</groups>
+    	</notify4errors>
+	</sections>
+</config>
