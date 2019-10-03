@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/ext4mage_notify4errors",
+    "name": "openmage-module-fostering\/ext4mage_notify4errors",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Record messages and 404 errors, so you can correct errors before you lose customers",
     "authors": [
