@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/ext4mage_notify4errors",
+    "name": "OpenMageModuleFostering\/ext4mage_notify4errors",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "Record messages and 404 errors, so you can correct errors before you lose customers",
     "authors": [
-    {
-        "name": "ext4mage",
-        "email": "info@ext4mage.com"
-    }
-],
+        {
+            "name": "ext4mage",
+            "email": "info@ext4mage.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
